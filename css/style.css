@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+  }
+
+  button {
+    margin: 50px;
+    border: 0;
+    border-radius: 50px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #eaeaea;
+    color: #000;
+  
+    transition:
+      background-color, 0.8s,
+      color, 0.8s;
+  }
+  
+  button:hover {
+    background-color: #f00707;
+    color: #fff
+  }
+
+button:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+} 
+
+  
+div {
+    margin: 50px;
+    padding: 90px;
+    width: 300px;
+    border-radius: 90px;
+    color: white;
+    font-size: 10px;
+    font-weight: 300;
+    
+    transform: scale(1.8,2) rotate(30deg); 
+  }
+  
+div:hover {
+    animation: deslizar 7s normal;    
+
+}
+  
+  @keyframes deslizar {
+    0% { opacity: 0%; }
+    50% { opacity: 100%; transform: translateX(400px) rotate(30deg);}
+    100% { opacity: 0%; transform: scale(2)}
+  }
+  
+  img {
+    width: 50px;
+  }
